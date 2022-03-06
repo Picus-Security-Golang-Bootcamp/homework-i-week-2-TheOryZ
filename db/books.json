@@ -1,28 +1,3 @@
-## Homework | Week 2
-
-### Book list application with Go
-
-This application has two functions.
-1. Get all book list
-2. Fetch detail information by book name
-
-
-### list command
-```
-go run main.go list
-```
-This command is used to list all books.
-
-### search command 
-```
-go run main.go search <bookName>
-go run main.go search Lord of the Ring: The Return of 
-```
-This command is used to searching books
-
-There is a .json file in the application where the book information is kept.
-
-```json
 {
     "Books": [
         {
@@ -52,4 +27,3 @@ There is a .json file in the application where the book information is kept.
         }
     ]
 }
-```
