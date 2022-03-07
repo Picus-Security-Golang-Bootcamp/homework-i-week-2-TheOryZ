@@ -31,10 +31,7 @@ func main() {
 				var books Books
 				GetAllBoks(&books)
 				for i := 0; i < len(books.Books); i++ {
-					fmt.Println(strings.Repeat("*", 25))
 					fmt.Println("Book Title: " + books.Books[i].Title)
-					fmt.Println("Book Author: " + books.Books[i].Author)
-					fmt.Println("Book Release Date: " + books.Books[i].Release_Date)
 				}
 				fmt.Println(strings.Repeat("*", 25))
 				fmt.Println("Books count: ", len(books.Books))
