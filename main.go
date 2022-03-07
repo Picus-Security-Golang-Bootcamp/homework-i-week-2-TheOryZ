@@ -38,10 +38,12 @@ func main() {
 				}
 				fmt.Println(strings.Repeat("*", 25))
 				fmt.Println("Books count: ", len(books.Books))
-			} else if command == "search" && len(args) != 2 {
+			} else if command == "search" && len(args) < 2 {
 				fmt.Println("Please enter a valid book title.")
 			} else {
-				book, err := GetByTitle(args[1])
+				bookTitle := args[1:]
+				_bookTitle := strings.Join(bookTitle, " ")
+				book, err := GetByTitle(_bookTitle)
 				if err != nil {
 					fmt.Println("An error occurred while fetching the book detail. Error :" + err.Error())
 				} else if len(book.Title) <= 0 {
